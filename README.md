@@ -3,5 +3,4 @@
 
 ### 1. tic tac toe game
 
->practice code 
->source : [React tutorial](https://reactjs.org/tutorial/tutorial.html)
+>practice code (source : [React tutorial](https://reactjs.org/tutorial/tutorial.html))
