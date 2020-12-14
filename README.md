@@ -4,7 +4,6 @@
 ### 1. tic tac toe game
 
 >practice code (source : [React tutorial](https://reactjs.org/tutorial/tutorial.html))
-
 > 정리 : [리액트 초기세팅 및 실습 1차](https://kline1103.tistory.com/55?category=426769)
 
 ### 2. compnent test
