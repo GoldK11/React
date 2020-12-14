@@ -13,7 +13,3 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-
-
-// DXGGyoy_R6h_AXjrehxL
-// oYB51nGp7j

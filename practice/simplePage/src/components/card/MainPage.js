@@ -1,12 +1,12 @@
 import Header from './Header';
 import Contents from './Contents';
+import CONST from 'src/assets/cosnt';
 import 'src/css/MainPage.css';
-
 
 function MainPage() {
     return (
         <div className="MainPage">
-            <Header title={"dd"}></Header>
+            <Header title={CONST.PAGES.MOVIE}></Header>
             <Contents></Contents>
         </div>
     );

@@ -1,22 +1,20 @@
 import React from 'react';
 import Toolbar from './Toolbar';
 import Movie from './Movie';
+import CONST from 'src/assets/cosnt';
 import 'src/css/Contents.css';
 
 class Contents extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            params: {
-                query: null,
-                genre: 0
-            }
+            params: {}
         }
     }
 
     render() {
+        console.log("Render : Contents component");
         const params = this.state.params;
-        console.log("render Contents", params);
         return (
             <div className="Contents">
                 <Toolbar onSearch={this.handleSearch}></Toolbar>
@@ -28,8 +26,10 @@ class Contents extends React.Component {
     handleSearch = (data) => {
         const params = this.state.params
         params[data.key] = data.value;
-        console.log("handle search", params);
-
+        if (!params[CONST.URL.PARAMS.QUERY]) {
+            alert(CONST.ALERT.ERROR.SEARCH.TITLE);
+            return;
+        }
         this.setState(params);
     };
 
