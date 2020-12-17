@@ -49,7 +49,7 @@ class Toolbar extends React.Component {
     }
 
     changeGenre = (e, value, reason) => {
-        let data = { key: CONST.URL.PARAMS.GENRE };
+        let data = { key: CONST.URL.PARAMS.GENRE, value: value.value };
         this.props.onSearch(data);
     }
 }
