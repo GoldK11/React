@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactTabulator } from 'react-tabulator';
-import CONST from 'src/assets/cosnt';
+import CONST from 'src/assets/const';
 import API from 'src/assets/api'
 import LIB from 'src/assets/lib'
 import 'src/css/Movie.css';
@@ -54,16 +54,20 @@ class Movie extends React.Component {
 
     componentDidUpdate() {
         console.log("componentDidUpdate : Movie component");
+        if (!this.props.urlQuery[CONST.URL.QUERY.QUERY]) {
+            alert(CONST.ALERT.ERROR.SEARCH.TITLE);
+            return;
+        }
         const tabulator = this.myRef.current.table;
-        tabulator.setData(API.ajax.query, this.props.params);
+        tabulator.setData(API.ajax.query, this.props.urlQuery);
     }
 
     // ======== user custom method ========
 
     ajaxURLGenerator = (url, config, params) => {
         console.log("ajaxURLGenerator", url, params);
-        let newURL = `${url}?${CONST.URL.PARAMS.QUERY}=${params.query}&${CONST.URL.PARAMS.START}=${(params.page - 1) * params.size + 1}`;
-        newURL += params.genre ? `&${CONST.URL.PARAMS.GENRE}=${params.genre}` : "";
+        let newURL = `${url}?${CONST.URL.QUERY.QUERY}=${params.query}&${CONST.URL.QUERY.START}=${(params.page - 1) * params.size + 1}`;
+        newURL += params.genre ? `&${CONST.URL.QUERY.GENRE}=${params.genre}` : "";
         return newURL;
     }
 

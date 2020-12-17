@@ -1,5 +1,5 @@
 import API from 'src/assets/api'
-import CONST from 'src/assets/cosnt';
+import CONST from 'src/assets/const';
 
 const LIBS = {
     TABULATOR: {

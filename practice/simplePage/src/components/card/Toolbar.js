@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import CONST from 'src/assets/cosnt';
+import CONST from 'src/assets/const';
 import LIB from 'src/assets/lib';
 import 'src/css/Toolbar.css';
 
@@ -44,12 +44,12 @@ class Toolbar extends React.Component {
             e.preventDefault();
             return false;
         }
-        const data = { key: CONST.URL.PARAMS.QUERY, value: e.target.value }
+        const data = { key: CONST.URL.QUERY.QUERY, value: e.target.value }
         this.props.onSearch(data);
     }
 
     changeGenre = (e, value, reason) => {
-        let data = { key: CONST.URL.PARAMS.GENRE, value: value.value };
+        let data = { key: CONST.URL.QUERY.GENRE, value: value.value };
         this.props.onSearch(data);
     }
 }

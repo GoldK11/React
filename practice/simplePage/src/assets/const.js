@@ -49,7 +49,7 @@ const CONST = {
     },
 
     URL: {
-        PARAMS: {
+        QUERY: {
             QUERY: "query",
             GENRE: "genre",
             START: "start",

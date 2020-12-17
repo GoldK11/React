@@ -1,6 +1,6 @@
 import Header from './Header';
 import Contents from './Contents';
-import CONST from 'src/assets/cosnt';
+import CONST from 'src/assets/const';
 import 'src/css/MainPage.css';
 
 function MainPage() {
