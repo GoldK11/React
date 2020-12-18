@@ -5,8 +5,8 @@ import 'src/css/NotFound.css';
 function NotFound(props) {
     return (
         <div className="NotFound">
-            <div>{CONST.PLACEHOLDER.NOT_FOUND}</div>
-            <Link className="RedirecLink" to="/">{CONST.ROUTER.NAME.HOME}{CONST.PLACEHOLDER.REDIRECT}</Link>
+            <div>{CONST.TEXT.NOT_FOUND}</div>
+            <Link className="RedirecLink" to="/">{CONST.ROUTER.NAME.HOME}{CONST.TEXT.MOVE}</Link>
         </div>
     )
 }

@@ -6,7 +6,7 @@ function Home(props) {
     return (
         <div className="Home">
             <div>{CONST.ROUTER.NAME.HOME}</div>
-            <Link className="RedirecLink" to={CONST.ROUTER.PATH.LIST}>{CONST.ROUTER.NAME.LIST}{CONST.PLACEHOLDER.REDIRECT}</Link>
+            <Link className="RedirecLink" to={CONST.ROUTER.PATH.LIST}>{CONST.ROUTER.NAME.LIST}{CONST.TEXT.MOVE}</Link>
         </div>
     )
 }
