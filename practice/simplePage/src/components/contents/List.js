@@ -1,9 +1,9 @@
 import React from 'react';
-import Toolbar from './Toolbar';
+import Toolbar from '../utilities/Toolbar';
 import Movie from './Movie';
-import 'src/css/Contents.css';
+import 'src/css/List.css';
 
-class Contents extends React.Component {
+class List extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,10 +12,10 @@ class Contents extends React.Component {
     }
 
     render() {
-        console.log("Render : Contents component");
+        console.log("Render : List component");
         const urlQuery = this.state.urlQuery;
         return (
-            <div className="Contents">
+            <div className="List">
                 <Toolbar onSearch={this.handleSearch}></Toolbar>
                 <Movie urlQuery={urlQuery}></Movie>
             </div>
@@ -34,6 +34,4 @@ class Contents extends React.Component {
 }
 
 
-
-
-export default Contents;
+export default List;

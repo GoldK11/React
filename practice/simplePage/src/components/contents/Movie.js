@@ -16,8 +16,8 @@ class Movie extends React.Component {
                 width: 150, hozAlign: "center", formatter: "image", headerSort: false
             },
             { title: CONST.TABLE.COLUMNS.LABEL.TITLE, field: CONST.TABLE.COLUMNS.VALUE.TITLE, minWidth: 200, formatter: "html" },
-            { title: CONST.TABLE.COLUMNS.LABEL.DIRECTOR, field: CONST.TABLE.COLUMNS.VALUE.DIRECTOR, minWidth: 100, width: 200 },
-            { title: CONST.TABLE.COLUMNS.LABEL.ACTORS, field: CONST.TABLE.COLUMNS.VALUE.ACTORS, minWidth: 200 },
+            { title: CONST.TABLE.COLUMNS.LABEL.DIRECTOR, field: CONST.TABLE.COLUMNS.VALUE.DIRECTOR, minWidth: 120 },
+            { title: CONST.TABLE.COLUMNS.LABEL.ACTORS, field: CONST.TABLE.COLUMNS.VALUE.ACTORS, minWidth: 150 },
             {
                 title: CONST.TABLE.COLUMNS.LABEL.RATING, field: CONST.TABLE.COLUMNS.VALUE.RATING, minWidth: 100,
                 width: 150, hozAlign: "center", formatter: "star"

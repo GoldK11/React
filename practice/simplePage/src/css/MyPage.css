@@ -1,0 +1,6 @@
+.MyPage{
+    font-size: calc(20px + 3vmin);
+    padding-bottom: 10%;
+    font-weight: bold;
+    display: flex;
+}

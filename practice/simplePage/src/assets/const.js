@@ -1,14 +1,39 @@
 const CONST = {
     APPLICATION: "Simple Page",
 
-    PAGES: {
-        MOVIE: "Movie",
-    },
-
     PLACEHOLDER: {
         TITLE: "제목",
         GENRE: "장르",
         EMPTY_TABLE: "No Data",
+    },
+
+    TEXT: {
+        NOT_FOUND: "404 Page Not Found",
+        PROFILE: "프로필",
+        PERSONAL: "개인",
+        WORD_LIST: "단어장",
+        MOVE: "으로 이동",
+        LEVEL: "Lv",
+        ID: "아이디",
+        MAIL: "메일",
+        PASSWORD: "비밀번호",
+        MY: "내",
+        GRADE: "등급",
+        ABOUT: "안내",
+        MORE: "더보기",
+        INFO: "정보"
+    },
+
+    BUTTON: {
+        IMAGE: "사진",
+        UPLOAD: "업로드",
+        CREATE: "생성",
+        DELETE: "삭제",
+        CHANGE: "변경",
+        EDIT: "수정",
+        SEARCH: "검색",
+        CONFIRM: "확인",
+        CANCEL: "취소"
     },
 
 
@@ -45,6 +70,21 @@ const CONST = {
                 ACTORS: "actor",
                 RATING: "userRating"
             }
+        }
+    },
+
+    ROUTER: {
+        PATH: {
+            LIST: "/list",
+            MYPAGE: "/mypage",
+            LOGIN: "/login",
+        },
+        NAME: {
+            "": "Home",
+            HOME: "Home",
+            LIST: "Movie",
+            MYPAGE: "My Page",
+            LOGIN: "Log In",
         }
     },
 

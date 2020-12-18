@@ -33,6 +33,11 @@ button:disabled{
   background: #555; 
 }
 
+/* link */
+a:-webkit-any-link {
+  cursor: pointer;
+  text-decoration: none;
+}
 
 /* state */
 /* focus */

@@ -1,0 +1,12 @@
+.NotFound{
+    font-size: calc(20px + 3vmin);
+    padding-top: 10%;
+    font-weight: bold;
+    text-align: center;
+}
+.RedirecLink{
+    font-size: calc(10px + 1.5vmin);
+}
+.RedirecLink:hover{
+    color: teal;
+}
