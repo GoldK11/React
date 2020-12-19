@@ -5,8 +5,8 @@ import 'src/css/Home.css';
 function Home(props) {
     return (
         <div className="Home">
-            <div>{CONST.ROUTER.NAME.HOME}</div>
-            <Link className="RedirecLink" to={CONST.ROUTER.PATH.LIST}>{CONST.ROUTER.NAME.LIST}{CONST.TEXT.MOVE}</Link>
+            <div className="SizeRes26">{CONST.ROUTER.NAME.HOME}</div>
+            <Link className="ButtonDarken SizeRes14 ColorPrimary" to={CONST.ROUTER.PATH.LIST}>{CONST.ROUTER.NAME.LIST}{CONST.TEXT.MOVE}</Link>
         </div>
     )
 }

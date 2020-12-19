@@ -21,7 +21,9 @@ const CONST = {
         GRADE: "등급",
         ABOUT: "안내",
         MORE: "더보기",
-        INFO: "정보"
+        INFO: "정보",
+        SETTING: "환경설정",
+        ACCOUNT: "계정"
     },
 
     BUTTON: {
@@ -33,7 +35,10 @@ const CONST = {
         EDIT: "수정",
         SEARCH: "검색",
         CONFIRM: "확인",
-        CANCEL: "취소"
+        CANCEL: "취소",
+        MANAGE: "관리",
+        LOGOUT: "로그아웃",
+        LOGIN: "로그인"
     },
 
 

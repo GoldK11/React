@@ -9,7 +9,7 @@ function Header(props) {
     return (
         <div className="Header">
             <Navigation></Navigation>
-            <div className="Title">
+            <div className="Title ColorWhite SizeRes20">
                 {CONST.ROUTER.NAME[location.toUpperCase()]}
             </div>
         </div>

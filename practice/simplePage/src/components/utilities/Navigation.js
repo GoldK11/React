@@ -6,9 +6,9 @@ function Navigation(props) {
 
     return (
         <div className="Navigation">
-            <NavLink className="NavItem" exact to="/">{CONST.ROUTER.NAME.HOME}</NavLink>
-            <NavLink className="NavItem" to={CONST.ROUTER.PATH.MYPAGE}>{CONST.ROUTER.NAME.MYPAGE}</NavLink>
-            <NavLink className="NavItem" to={CONST.ROUTER.PATH.LOGIN}>{CONST.ROUTER.NAME.LOGIN}</NavLink>
+            <NavLink className="NavItem ColorWhite Button Size14" exact to="/">{CONST.ROUTER.NAME.HOME}</NavLink>
+            <NavLink className="NavItem ColorWhite Button Size14" to={CONST.ROUTER.PATH.MYPAGE}>{CONST.ROUTER.NAME.MYPAGE}</NavLink>
+            <NavLink className="NavItem ColorWhite Button Size14" to={CONST.ROUTER.PATH.LOGIN}>{CONST.ROUTER.NAME.LOGIN}</NavLink>
         </div>
     );
 }
