@@ -1,8 +1,8 @@
 import 'src/css/MyPage.css';
-import Profile from 'src/components/subs/Profile';
-import InfoMin from 'src/components/subs/InfoMin';
-import GridList from 'src/components/subs/GridList';
-import CustomField from 'src/components/subs/CustomField';
+import Profile from 'src/components/contents/Profile';
+import InfoMin from 'src/components/contents/InfoMin';
+import GridList from 'src/components/contents/GridList';
+import CustomField from 'src/components/contents/CustomField';
 
 function MyPage(props) {
     return (

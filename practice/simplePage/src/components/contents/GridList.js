@@ -1,4 +1,4 @@
-import Preview from 'src/components/subs/Preview';
+import Preview from 'src/components/contents/Preview';
 import CONST from 'src/assets/const';
 // import 'src/css/GridList.css';
 

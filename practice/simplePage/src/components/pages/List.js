@@ -1,6 +1,6 @@
 import React from 'react';
 import Toolbar from '../utilities/Toolbar';
-import Movie from './Movie';
+import Movie from '../contents/Movie';
 import 'src/css/List.css';
 
 class List extends React.Component {
@@ -28,7 +28,6 @@ class List extends React.Component {
             query[data.key] = data.value;
             return { urlQuery: query }
         })
-
     };
 
 }

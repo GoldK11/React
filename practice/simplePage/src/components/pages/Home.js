@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import CONST from 'src/assets/const';
 import 'src/css/Home.css';
 
+
 function Home(props) {
     return (
         <div className="Home">

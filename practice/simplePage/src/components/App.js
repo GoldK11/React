@@ -1,17 +1,17 @@
 import Header from './layout/Header';
-import Contents from './layout/Contents';
+import Page from './layout/Page';
 import { BrowserRouter as Router } from 'react-router-dom';
 import 'src/css/App.css';
 
 
 function App() {
   return (
-    <div className="App Layout">
-      <Router>
+    <Router>
+      <div className="App Layout">
         <Header></Header>
-        <Contents></Contents>
-      </Router>
-    </div>
+        <Page></Page>
+      </div>
+    </Router>
   );
 }
 

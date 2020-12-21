@@ -1,17 +1,17 @@
-import Home from '../contents/Home';
-import List from '../contents/List';
-import MyPage from '../contents/MyPage';
-import Login from '../contents/Login';
-import NotFound from "../contents/NotFound";
+import Home from '../pages/Home';
+import List from '../pages/List';
+import MyPage from '../pages/MyPage';
+import Login from '../pages/Login';
+import NotFound from "../pages/NotFound";
 import CONST from 'src/assets/const';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import 'src/css/Contents.css';
+import 'src/css/Page.css';
 
-function Contents() {
+function Page() {
     let loggedIn = true;
 
     return (
-        <div className="Contents">
+        <div className="Page">
             <Switch>
                 <Route exact path="/" component={Home}></Route>
                 <Route path={CONST.ROUTER.PATH.LIST} component={List}></Route>
@@ -25,4 +25,4 @@ function Contents() {
     );
 }
 
-export default Contents;
+export default Page;
