@@ -1,10 +1,10 @@
 import Navigation from "src/components/utilities/Navigation";
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 import CONST from 'src/assets/const';
 import 'src/css/layout/Header.css';
 
 function Header(props) {
-    let location = useLocation().pathname.slice(1);
+    // let location = useLocation().pathname.slice(1);
 
     const mainNav = [
         { path: CONST.ROUTER.PATH.HOME, name: CONST.ROUTER.NAME.HOME },
