@@ -1,0 +1,25 @@
+.Header{
+    align-items: center;
+    justify-content: center;
+    grid-area: 1/1/2/1;
+    background: linear-gradient(90deg, rgba(29,31,38,1) 20%, rgba(64,72,87,1) 65%, rgba(100,145,198,1) 99%);
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.Header .Title{
+    width: 200px;
+    text-align: center;
+}
+
+.Header .MainNav{
+    width: calc(100% - 500px);
+    min-width: 500px;
+}
+
+.Header .SubNav{
+    width: 300px;
+    text-align: center;
+}

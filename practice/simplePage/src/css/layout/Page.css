@@ -1,0 +1,6 @@
+.Page{
+    padding: 20px 5% 50px 5%;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 140px);
+}
