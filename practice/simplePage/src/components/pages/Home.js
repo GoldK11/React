@@ -5,7 +5,7 @@ import 'src/css/pages/Home.css';
 
 
 function Home(props) {
-    const navItem = Router.filter(ob => ob.name === CONST.ROUTER.NAME.LIST);
+    const navItem = Router.filter(ob => ob.name === CONST.ROUTER.NAME.MAIN);
 
     return (
         <div className="Home">

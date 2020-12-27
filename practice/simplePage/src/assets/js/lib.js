@@ -13,20 +13,36 @@ const LIBS = {
                 height: 'calc(100% - 40px)',
                 layout: "fitColumns",
                 placeholder: CONST.PLACEHOLDER.EMPTY_TABLE,
+                movableRows: true,
                 movableColumns: true,
+                selectable: true,
+                addRowPos: "top",
                 ajaxConfig: {
                     mode: API.ajax.config.mode.CORS,
                     method: "GET",
                     headers: API.ajax.config.headers
                 },
                 pagination: "remote",
-                paginationSize: 10
+                paginationSize: 10,
+                cellContext: (e, cell) => { console.log("cellRightClick"); e.preventDefault(); }
             }
         },
+        columns: {
+            selector: { formatter: "rowSelection", titleFormatter: "rowSelection", hozAlign: "center", width: 20, headerSort: false, cellClick: (e, cell) => cell.getRow().toggleSelect() },
+        },
+        columnsFunction: {
+            cellDblClick: (e, cell) => { return cell.edit(true) },
+        }
     },
 
     MATERIAL_UI: {
-        //
+        data: {
+            select: {
+                level: [
+                    { "title": CONST.SELECT.DIFFICULTY.BEGINNER, "value": 1 }, { "title": CONST.SELECT.DIFFICULTY.BASIC, "value": 2 }, { "title": CONST.SELECT.DIFFICULTY.INTERMEDIATE, "value": 3 }, { "title": CONST.SELECT.DIFFICULTY.ADVANCED, "value": 4 }, { "title": CONST.SELECT.DIFFICULTY.EXPERT, "value": 5 }
+                ]
+            }
+        }
     }
 }
 

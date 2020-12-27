@@ -4,6 +4,7 @@ import CONST from 'src/assets/js/const';
 import API from 'src/assets/js/api'
 import LIB from 'src/assets/js/lib'
 import 'src/css/contents/Movie.css';
+import LIBS from 'src/assets/js/lib';
 
 class Movie extends React.Component {
     constructor(props) {
@@ -11,16 +12,26 @@ class Movie extends React.Component {
         this.myRef = React.createRef();
 
         this.columns = [
+            LIBS.TABULATOR.columns.selector,
             {
                 title: CONST.TABLE.COLUMNS.LABEL.IMAGE, field: CONST.TABLE.COLUMNS.VALUE.IMAGE, minWidth: 150,
                 width: 150, hozAlign: "center", formatter: "image", headerSort: false
             },
-            { title: CONST.TABLE.COLUMNS.LABEL.TITLE, field: CONST.TABLE.COLUMNS.VALUE.TITLE, minWidth: 200, formatter: "html" },
-            { title: CONST.TABLE.COLUMNS.LABEL.DIRECTOR, field: CONST.TABLE.COLUMNS.VALUE.DIRECTOR, minWidth: 120 },
-            { title: CONST.TABLE.COLUMNS.LABEL.ACTORS, field: CONST.TABLE.COLUMNS.VALUE.ACTORS, minWidth: 150 },
+            {
+                title: CONST.TABLE.COLUMNS.LABEL.TITLE, field: CONST.TABLE.COLUMNS.VALUE.TITLE, minWidth: 200,
+                formatter: "html", editable: false, cellDblClick: LIB.TABULATOR.columnsFunction.cellDblClick, editor: "input", validator: "required",
+            },
+            {
+                title: CONST.TABLE.COLUMNS.LABEL.DIRECTOR, field: CONST.TABLE.COLUMNS.VALUE.DIRECTOR, minWidth: 120,
+                editable: false, cellDblClick: LIB.TABULATOR.columnsFunction.cellDblClick, editor: "input"
+            },
+            {
+                title: CONST.TABLE.COLUMNS.LABEL.ACTORS, field: CONST.TABLE.COLUMNS.VALUE.ACTORS, minWidth: 150,
+                editable: false, cellDblClick: LIB.TABULATOR.columnsFunction.cellDblClick, editor: "input"
+            },
             {
                 title: CONST.TABLE.COLUMNS.LABEL.RATING, field: CONST.TABLE.COLUMNS.VALUE.RATING, minWidth: 100,
-                width: 150, hozAlign: "center", formatter: "star"
+                width: 150, hozAlign: "center", formatter: "star", editable: false, cellDblClick: LIB.TABULATOR.columnsFunction.cellDblClick, editor: "star"
             }
         ];
 
@@ -34,7 +45,6 @@ class Movie extends React.Component {
 
 
     render() {
-        console.log("Render : Movie component");
         return (
             <div className="Movie">
                 <ReactTabulator
@@ -48,24 +58,24 @@ class Movie extends React.Component {
         );
     }
 
-    componentDidMount() {
-        console.log("componentDidMount : Movie component");
-    }
-
     componentDidUpdate() {
-        console.log("componentDidUpdate : Movie component");
-        if (!this.props.urlQuery[CONST.URL.QUERY.QUERY]) {
+        const props = this.props.propsObj;
+        if (props.trigger === "button") {
+            this.handleClick(props.clickedButton);
+            return;
+        }
+        if (!props.urlQuery[CONST.URL.QUERY.QUERY]) {
             alert(CONST.ALERT.ERROR.SEARCH.TITLE);
             return;
         }
         const tabulator = this.myRef.current.table;
-        tabulator.setData(API.ajax.query, this.props.urlQuery);
+        tabulator.setData(API.ajax.query, props.urlQuery);
     }
 
     // ======== user custom method ========
 
     ajaxURLGenerator = (url, config, params) => {
-        console.log("ajaxURLGenerator", url, params);
+        // console.log("ajaxURLGenerator", url, params);
         let newURL = `${url}?${CONST.URL.QUERY.QUERY}=${params.query}&${CONST.URL.QUERY.START}=${(params.page - 1) * params.size + 1}`;
         newURL += params.genre ? `&${CONST.URL.QUERY.GENRE}=${params.genre}` : "";
         return newURL;
@@ -73,7 +83,7 @@ class Movie extends React.Component {
 
     ajaxResponse = (url, params, response) => {
         let data = response.items;
-        console.log('ajaxResponse', url, response);
+        // console.log('ajaxResponse', url, response);
         data.forEach(ob => {
             ob.title = `${ob.title}<br><i>${ob.subtitle}</i>`
             ob.image = ob.image === "" ? API.default.image : ob.image;
@@ -91,6 +101,23 @@ class Movie extends React.Component {
 
     ajaxError = (error) => {
         console.log('ajaxError', error);
+    }
+
+    handleClick = (event) => {
+        const table = this.myRef.current.table;
+        switch (event) {
+            case CONST.BUTTON.ADD:
+                table.addRow({});
+                break;
+            case CONST.BUTTON.DELETE:
+                table.getSelectedRows().forEach(row => row.delete());
+                break;
+            case CONST.BUTTON.SAVE:
+                alert(CONST.ALERT.SUCCESS.SAVE)
+                break;
+            default:
+            //
+        }
     }
 }
 

@@ -19,6 +19,11 @@
     min-height: 120px;
     padding: 5px;
 }
+.Main .Setting{
+    height: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
 .Main .SubItem{
     height: 33%;
     display: flex;
@@ -30,4 +35,7 @@
     align-items: center;
     display: inline-grid;
     border-radius: 2px;
+}
+.Main .LinkButton{
+    align-self: flex-end;
 }

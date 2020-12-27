@@ -1,5 +1,6 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
+import { Delete, PlaylistAdd, Save } from '@material-ui/icons';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import CONST from 'src/assets/js/const';
 import LIB from 'src/assets/js/lib';
@@ -7,7 +8,6 @@ import 'src/css/contents/Toolbar.css';
 
 class Toolbar extends React.Component {
     render() {
-        console.log("Render : Toolbar component");
         return (
             <div className="Toolbar">
                 <div className="Search">
@@ -33,6 +33,14 @@ class Toolbar extends React.Component {
                         }}
                     />
                 </div>
+                <div className="SettingButton">
+                    <button id={CONST.BUTTON.ADD} className="Item ButtonDarken ColorBody"
+                        onClick={this.clickButton}><PlaylistAdd /></button>
+                    <button id={CONST.BUTTON.DELETE} className="Item ButtonDarken ColorBody"
+                        onClick={this.clickButton}><Delete /></button>
+                    <button id={CONST.BUTTON.SAVE} className="Item ButtonDarken ColorBody"
+                        onClick={this.clickButton}><Save /></button>
+                </div>
             </div>
         );
     }
@@ -52,6 +60,11 @@ class Toolbar extends React.Component {
         let data = { key: CONST.URL.QUERY.GENRE, value: value.value };
         this.props.onSearch(data);
     }
+
+    clickButton = (e) => {
+        this.props.onClick(e.currentTarget.id)
+    }
+
 }
 
 

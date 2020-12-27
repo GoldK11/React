@@ -7,29 +7,32 @@ class List extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            urlQuery: {}
+            urlQuery: {},
+            clickedButton: null,
+            trigger: null
         }
-    }
-
-    render() {
-        console.log("Render : List component");
-        const urlQuery = this.state.urlQuery;
-        return (
-            <div className="List">
-                <Toolbar onSearch={this.handleSearch}></Toolbar>
-                <Movie urlQuery={urlQuery}></Movie>
-            </div>
-        );
     }
 
     handleSearch = (data) => {
         this.setState((state) => {
             const query = state.urlQuery;
             query[data.key] = data.value;
-            return { urlQuery: query }
+            return { urlQuery: query, trigger: "search" }
         })
     };
 
+    handleClick = (data) => {
+        this.setState({ clickedButton: data, trigger: "button" });
+    }
+
+    render() {
+        return (
+            <div className="List">
+                <Toolbar onSearch={this.handleSearch} onClick={this.handleClick}></Toolbar>
+                <Movie propsObj={this.state}></Movie>
+            </div>
+        );
+    }
 }
 
 

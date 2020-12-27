@@ -17,13 +17,13 @@ const CONST = {
         MORE: "더보기",
         GRADE: "등급",
         MAIL: "메일",
+        NAME_: "명",
         PASSWORD: "비밀번호",
         SELECT: "선택",
         ID: "아이디",
         ABOUT: "안내",
         MOVE: "으로 이동",
         NAME: "이름",
-        NAME_: "명",
         INPUT: "입력",
         INFO: "정보",
         TYPE: "타입",
@@ -37,9 +37,12 @@ const CONST = {
     BUTTON: {
         IMAGE: "사진",
         UPLOAD: "업로드",
+        ADD: "추가",
         CREATE: "생성",
         DELETE: "삭제",
         CHANGE: "변경",
+        SAVE: "저장",
+        ANALYSIS: "분석",
         EDIT: "수정",
         SEARCH: "검색",
         CONFIRM: "확인",
@@ -47,6 +50,16 @@ const CONST = {
         MANAGE: "관리",
         LOGOUT: "로그아웃",
         LOGIN: "로그인"
+    },
+
+    SELECT: {
+        DIFFICULTY: {
+            EXPERT: "고급",
+            ADVANCED: "상급",
+            INTERMEDIATE: "중급",
+            BASIC: "초급",
+            BEGINNER: "기초"
+        }
     },
 
 
@@ -60,7 +73,7 @@ const CONST = {
             //
         },
         SUCCESS: {
-            //
+            SAVE: "저장되었습니다"
         },
         CONFIRM: {
             //

@@ -1,7 +1,11 @@
+import Navigation from "src/components/utilities/Navigation";
 import CONST from 'src/assets/js/const';
+import Router from 'src/assets/js/router';
 import controller from 'src/components/controllers/ControllerMain';
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import LIB from 'src/assets/js/lib';
 import 'src/css/pages/Main.css';
 
 class Main extends React.Component {
@@ -9,7 +13,7 @@ class Main extends React.Component {
         super(props);
         this.state = {
             fileName: null,
-            fileType: null
+            fileType: null,
         }
     }
 
@@ -33,7 +37,12 @@ class Main extends React.Component {
         this.setState({ fileName: e.target.value })
     }
 
+    changeLevel = (e, value) => {
+        console.log("value", value);
+    }
+
     render() {
+        const navItem = Router.filter(ob => ob.name === CONST.ROUTER.NAME.LIST);
         return (
             <div className="Main">
                 <div className="Title SizeRes20 Bold">{CONST.TEXT.MAIN_TITLE}</div>
@@ -57,16 +66,25 @@ class Main extends React.Component {
                             />
                         </div>
                         <div className="SubItem">
-                            <TextField
+                            <Autocomplete
                                 id="difficulty"
                                 style={{ minWidth: 120 }}
-                                label={`${CONST.TEXT.DIFFICULTY} ${CONST.TEXT.SELECT}`}
-                                value={this.state.fileName || ''}
-                                onChange={this.changeFile}
+                                disableClearable
+                                defaultValue={LIB.MATERIAL_UI.data.select.level[1]}
+                                options={LIB.MATERIAL_UI.data.select.level}
+                                getOptionLabel={(option) => option.title}
+                                onChange={this.changeLevel}
+                                renderInput={(params) => {
+                                    return < TextField {...params} label={`${CONST.TEXT.DIFFICULTY} ${CONST.TEXT.SELECT}`} />
+                                }}
                             />
                         </div>
                     </div>
-                    <div></div>
+                    <div className="Setting">
+                        <div className="LinkButton BackColorPrimary">
+                            <Navigation class="ColorWhite Size20 Button" item={navItem}></Navigation>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
