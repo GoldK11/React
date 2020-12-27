@@ -1,6 +1,6 @@
 {
-  "homepage": "https://goldk11.github.io/React/",
   "proxy": "https://openapi.naver.com",
+  "homepage": "https://goldk11.github.io/React",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

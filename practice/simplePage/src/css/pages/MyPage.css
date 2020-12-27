@@ -1,7 +1,8 @@
 .MyPage{
+    /* 540 -30 = 510 210 150 150 */
     display: grid;
-    grid-template-rows: 200px repeat(2, minmax(200px, 1fr));
-    grid-template-columns: 200px repeat(2, minmax(200px, 1fr));
+    grid-template-rows: 210px repeat(2, minmax(150px, 1fr));
+    grid-template-columns: 210px repeat(2, minmax(150px, 1fr));
     height: 100%;
     padding: 0px 5%;
     grid-gap: 15px 10px;
@@ -21,8 +22,8 @@
 
 .ProfileUpload{
     position: absolute;
-    top: 80%;
-    left: 65%;
+    top: 75%;
+    left: 67%;
 }
 
 .Hidden{
@@ -31,14 +32,13 @@
 
 .InfoMin{
     grid-area: 1/2/2/4;
-    padding: 30px
+    padding: 10px
 }
 
 .InfoMin .Title{
     height: 50%;
     display: flex;
     align-items: flex-end;
-    padding-bottom: 1%;
 }
 
 .InfoMin .Item{
@@ -63,7 +63,6 @@
     display: inline-block;
 }
 .InfoMin .Right{
-    /* width : calc(100% - 100px); */
     display: inline-flex;
 }
 .Popover{
@@ -92,7 +91,7 @@
     height: calc(100% - 30px);
     border: 1px solid #d3d6da;
     display : -webkit-inline-box;
-    padding: 20px;
+    padding: 10px;
     overflow-x: auto;
     width: 100%;
 }
@@ -102,5 +101,6 @@
     margin: 5px 2%;
     padding: 1%;
     display: block;
+    overflow: hidden;
 }
 

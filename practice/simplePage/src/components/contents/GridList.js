@@ -1,5 +1,5 @@
 import Preview from 'src/components/contents/Preview';
-import CONST from 'src/assets/const';
+import CONST from 'src/assets/js/const';
 // import 'src/css/GridList.css';
 
 function GridList(props) {

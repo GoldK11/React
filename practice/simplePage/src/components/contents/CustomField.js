@@ -1,4 +1,4 @@
-import CONST from 'src/assets/const';
+import CONST from 'src/assets/js/const';
 // import 'src/css/CustomField.css';
 
 function CustomField(props) {

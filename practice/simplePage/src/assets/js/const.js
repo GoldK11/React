@@ -8,22 +8,30 @@ const CONST = {
     },
 
     TEXT: {
-        NOT_FOUND: "404 Page Not Found",
-        PROFILE: "프로필",
         PERSONAL: "개인",
+        ACCOUNT: "계정",
+        DIFFICULTY: "난이도",
+        MY: "내",
         WORD_LIST: "단어장",
-        MOVE: "으로 이동",
-        LEVEL: "Lv",
-        ID: "아이디",
+        MAIN_TITLE: "단어장 분석 연구 신청서",
+        MORE: "더보기",
+        GRADE: "등급",
         MAIL: "메일",
         PASSWORD: "비밀번호",
-        MY: "내",
-        GRADE: "등급",
+        SELECT: "선택",
+        ID: "아이디",
         ABOUT: "안내",
-        MORE: "더보기",
+        MOVE: "으로 이동",
+        NAME: "이름",
+        NAME_: "명",
+        INPUT: "입력",
         INFO: "정보",
+        TYPE: "타입",
+        FILE: "파일",
+        PROFILE: "프로필",
         SETTING: "환경설정",
-        ACCOUNT: "계정"
+        LEVEL: "Lv",
+        NOT_FOUND: "404 Page Not Found",
     },
 
     BUTTON: {
@@ -85,10 +93,10 @@ const CONST = {
             MAIN: "/main",
             MYPAGE: "/mypage",
             LOGIN: "/login",
-
             WHAT: "/what",
             WHY: "/why",
-            HOW: "how",
+            HOW: "/how",
+            NOT_FOUND: "*"
         },
         NAME: {
             "": "Home",
@@ -99,7 +107,14 @@ const CONST = {
             LOGIN: "Log In",
             WHAT: "What",
             WHY: "Who",
-            HOW: "How"
+            HOW: "How",
+            NOT_FOUND: "NOTFOUND"
+        },
+        META: {
+            CATEGORY: {
+                MAIN: 1,
+                SUB: 2
+            }
         }
     },
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import CONST from 'src/assets/const';
-import LIB from 'src/assets/lib';
+import CONST from 'src/assets/js/const';
+import LIB from 'src/assets/js/lib';
 import 'src/css/contents/Toolbar.css';
 
 class Toolbar extends React.Component {

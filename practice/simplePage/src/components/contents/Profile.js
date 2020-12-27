@@ -16,12 +16,10 @@ class Profile extends React.Component {
 
 
     handleUpload = (e) => {
-        console.log("image change", e);
         const reader = new FileReader();
         const file = e.target.files[0];
 
         reader.onloadend = () => {
-            console.log("onloaded")
             this.setState({
                 selectedFile: file,
                 previewUrl: reader.result

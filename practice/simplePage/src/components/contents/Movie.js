@@ -1,8 +1,8 @@
 import React from 'react';
 import { ReactTabulator } from 'react-tabulator';
-import CONST from 'src/assets/const';
-import API from 'src/assets/api'
-import LIB from 'src/assets/lib'
+import CONST from 'src/assets/js/const';
+import API from 'src/assets/js/api'
+import LIB from 'src/assets/js/lib'
 import 'src/css/contents/Movie.css';
 
 class Movie extends React.Component {

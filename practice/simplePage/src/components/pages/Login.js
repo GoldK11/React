@@ -1,4 +1,4 @@
-import CONST from 'src/assets/const';
+import CONST from 'src/assets/js/const';
 import 'src/css/pages/Login.css';
 
 function Login(props) {

@@ -1,6 +1,6 @@
 import Popup from 'src/components/utilities/Popup'
 import React from 'react';
-import CONST from 'src/assets/const';
+import CONST from 'src/assets/js/const';
 import HelpIcon from '@material-ui/icons/Help';
 import { Link } from 'react-router-dom';
 // import 'src/css/InfoMin.css';

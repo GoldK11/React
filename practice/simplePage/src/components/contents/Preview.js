@@ -1,6 +1,6 @@
 // import 'src/css/Preview.css';
 import { NavLink } from 'react-router-dom';
-import CONST from 'src/assets/const';
+import CONST from 'src/assets/js/const';
 
 function Preview(props) {
     return (

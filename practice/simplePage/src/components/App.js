@@ -15,10 +15,8 @@ function App() {
     <Router>
       <div className="App">
         <Header></Header>
-        <div className="Body">
-          <Page></Page>
-          <Footer></Footer>
-        </div>
+        <Page></Page>
+        <Footer></Footer>
       </div>
     </Router>
   );
