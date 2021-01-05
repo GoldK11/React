@@ -86,7 +86,7 @@ class Movie extends React.Component {
         // console.log('ajaxResponse', url, response);
         data.forEach(ob => {
             ob.title = `${ob.title}<br><i>${ob.subtitle}</i>`
-            ob.image = ob.image === "" ? API.default.image : ob.image;
+            // ob.image = ob.image === "" ? API.default.image : ob.image;
             ob.actor = ob.actor.replace(/\|/gi, " || ");
             ob.director = ob.director.slice(0, -1);
             ob.userRating /= 2
@@ -106,14 +106,23 @@ class Movie extends React.Component {
     handleClick = (event) => {
         const table = this.myRef.current.table;
         switch (event) {
-            case CONST.BUTTON.ADD:
+            case CONST.BUTTON.ID.ADD:
                 table.addRow({});
                 break;
-            case CONST.BUTTON.DELETE:
+            case CONST.BUTTON.ID.DELETE:
                 table.getSelectedRows().forEach(row => row.delete());
                 break;
-            case CONST.BUTTON.SAVE:
+            case CONST.BUTTON.ID.SAVE:
                 alert(CONST.ALERT.SUCCESS.SAVE)
+                break;
+            case CONST.BUTTON.ID.DOWNLOAD:
+                // const fileName = `EZIS_TopSql(${moment(this.$store.state.options.dateRange.from).format("YYMMDD")}).xlsx`;
+                // this.tabulator.download("xlsx", fileName);
+                console.log("download", table);
+                table.download("csv", "data.csv", { bom: true });
+                break;
+            case CONST.BUTTON.ID.PRINT:
+                table.print(false, true);
                 break;
             default:
             //

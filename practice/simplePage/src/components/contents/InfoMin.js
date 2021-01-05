@@ -11,7 +11,8 @@ class InfoMin extends React.Component {
         this.popoverID = "popover";
         this.state = {
             anchor: null,
-            content: null
+            content: null,
+            delayHandler: null
         }
     }
 
@@ -22,6 +23,22 @@ class InfoMin extends React.Component {
     handleClose = () => {
         this.setState({ anchor: null });
     };
+
+
+    handleMouseEnter = (e) => {
+        const target = e.currentTarget;
+        this.setState({
+            delayHandler:
+                setTimeout(() => {
+                    this.setState({ anchor: target })
+                }, 1000)
+        })
+    };
+
+    handleMouseLeave = () => {
+        clearTimeout(this.state.delayHandler)
+        this.setState({ anchor: null });
+    }
 
     generateContent = () => {
         return (
@@ -47,7 +64,8 @@ class InfoMin extends React.Component {
                     <span className="ColorExtra Size34 Left">{CONST.TEXT.LEVEL}. {level}</span>
                     <span className="ColorBody SizeRes34 Right Bold">{name}</span>
                     <div className="ColorWarning">
-                        <HelpIcon className="RoundButtonDarken" onClick={this.handleClick} ref={this.myRef} />
+                        <HelpIcon className="RoundButtonDarken"
+                            onMouseEnter={this.handleMouseEnter} onClick={this.handleClick} ref={this.myRef} />
                     </div>
                 </div>
                 <div className="Size16 Item">
@@ -59,10 +77,10 @@ class InfoMin extends React.Component {
                     <span className="ColorBody Right">{email}</span>
                 </div>
                 <div className="Size14 Bottom">
-                    <Link className="ButtonDarken ColorPrimary" to="/">{CONST.BUTTON.LOGOUT}</Link>
-                    <Link className="ButtonDarken ColorPrimary" to={CONST.ROUTER.PATH.LOGIN}>{CONST.TEXT.PERSONAL}{CONST.TEXT.INFO} {CONST.BUTTON.EDIT}</Link>
+                    <Link className="ButtonDarken ColorPrimary" to="/">{CONST.BUTTON.LABEL.LOGOUT}</Link>
+                    <Link className="ButtonDarken ColorPrimary" to={CONST.ROUTER.PATH.LOGIN}>{CONST.TEXT.PERSONAL}{CONST.TEXT.INFO} {CONST.BUTTON.LABEL.EDIT}</Link>
                 </div>
-                <Popup anchor={this.state.anchor} id={this.popoverID} onClose={this.handleClose} content={this.state.content}></Popup>
+                <Popup anchor={this.state.anchor} id={this.popoverID} content={this.state.content} onClose={this.handleClose}></Popup>
             </div>
         );
     }

@@ -6,7 +6,7 @@ function Page() {
     let loggedIn = true;
 
     return (
-        <div className="Page">
+        <div className="Page BodyBack">
             <Switch>
                 {Router.map(ob => {
                     return <Route key={ob.name} exact path={ob.path}

@@ -1,6 +1,6 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
-import { Delete, PlaylistAdd, Save } from '@material-ui/icons';
+import { Delete, PlaylistAdd, Save, SaveAlt, Print } from '@material-ui/icons';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import CONST from 'src/assets/js/const';
 import LIB from 'src/assets/js/lib';
@@ -34,12 +34,16 @@ class Toolbar extends React.Component {
                     />
                 </div>
                 <div className="SettingButton">
-                    <button id={CONST.BUTTON.ADD} className="Item ButtonDarken ColorBody"
+                    <button id={CONST.BUTTON.ID.ADD} className="Item ButtonDarken ColorBody"
                         onClick={this.clickButton}><PlaylistAdd /></button>
-                    <button id={CONST.BUTTON.DELETE} className="Item ButtonDarken ColorBody"
+                    <button id={CONST.BUTTON.ID.DELETE} className="Item ButtonDarken ColorBody"
                         onClick={this.clickButton}><Delete /></button>
-                    <button id={CONST.BUTTON.SAVE} className="Item ButtonDarken ColorBody"
+                    <button id={CONST.BUTTON.ID.SAVE} className="Item ButtonDarken ColorBody"
                         onClick={this.clickButton}><Save /></button>
+                    <button id={CONST.BUTTON.ID.DOWNLOAD} className="Item ButtonDarken ColorBody"
+                        onClick={this.clickButton}><SaveAlt /></button>
+                    <button id={CONST.BUTTON.ID.PRINT} className="Item ButtonDarken ColorBody"
+                        onClick={this.clickButton}><Print /></button>
                 </div>
             </div>
         );

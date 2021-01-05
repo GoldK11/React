@@ -10,7 +10,7 @@ const LIBS = {
         },
         options: {
             common: {
-                height: 'calc(100% - 40px)',
+                height: 'calc(100% - 20px)',
                 layout: "fitColumns",
                 placeholder: CONST.PLACEHOLDER.EMPTY_TABLE,
                 movableRows: true,
@@ -24,11 +24,19 @@ const LIBS = {
                 },
                 pagination: "remote",
                 paginationSize: 10,
+                printAsHtml: true,
+                printHeader: "<h1>Example Table Header<h1>",
+                printFooter: "<h2>Example Table Footer<h2>",
+                downloadDataFormatter: (data) => data,
+                downloadReady: (fileContents, blob) => blob,
                 cellContext: (e, cell) => { console.log("cellRightClick"); e.preventDefault(); }
             }
         },
         columns: {
-            selector: { formatter: "rowSelection", titleFormatter: "rowSelection", hozAlign: "center", width: 20, headerSort: false, cellClick: (e, cell) => cell.getRow().toggleSelect() },
+            selector: {
+                formatter: "rowSelection", titleFormatter: "rowSelection", hozAlign: "center", width: 20, headerSort: false,
+                cellClick: (e, cell) => cell.getRow().toggleSelect()
+            },
         },
         columnsFunction: {
             cellDblClick: (e, cell) => { return cell.edit(true) },
@@ -40,6 +48,8 @@ const LIBS = {
             select: {
                 level: [
                     { "title": CONST.SELECT.DIFFICULTY.BEGINNER, "value": 1 }, { "title": CONST.SELECT.DIFFICULTY.BASIC, "value": 2 }, { "title": CONST.SELECT.DIFFICULTY.INTERMEDIATE, "value": 3 }, { "title": CONST.SELECT.DIFFICULTY.ADVANCED, "value": 4 }, { "title": CONST.SELECT.DIFFICULTY.EXPERT, "value": 5 }
+                ],
+                category: [{ "title": CONST.SELECT.CATEGORY.EXAM, "value": 1 }, { "title": CONST.SELECT.CATEGORY.NOVEL, "value": 2 }, { "title": CONST.SELECT.CATEGORY.ESSAY, "value": 3 }, { "title": CONST.SELECT.CATEGORY.ARTICLE, "value": 4 }
                 ]
             }
         }

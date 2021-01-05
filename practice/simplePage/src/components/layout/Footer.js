@@ -2,7 +2,7 @@ import 'src/css/layout/Footer.css';
 
 function Page() {
     return (
-        <div className="Footer">
+        <div className="Footer MainGradient">
 
         </div>
     );

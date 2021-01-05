@@ -26,6 +26,7 @@ const CONST = {
         NAME: "이름",
         INPUT: "입력",
         INFO: "정보",
+        CATOGORY: "카테고리",
         TYPE: "타입",
         FILE: "파일",
         PROFILE: "프로필",
@@ -35,21 +36,44 @@ const CONST = {
     },
 
     BUTTON: {
-        IMAGE: "사진",
-        UPLOAD: "업로드",
-        ADD: "추가",
-        CREATE: "생성",
-        DELETE: "삭제",
-        CHANGE: "변경",
-        SAVE: "저장",
-        ANALYSIS: "분석",
-        EDIT: "수정",
-        SEARCH: "검색",
-        CONFIRM: "확인",
-        CANCEL: "취소",
-        MANAGE: "관리",
-        LOGOUT: "로그아웃",
-        LOGIN: "로그인"
+        ID: {
+            IMAGE: "image",
+            UPLOAD: "upload",
+            DOWNLOAD: "download",
+            ADD: "add",
+            CREATE: "create",
+            DELETE: "delete",
+            CHANGE: "change",
+            SAVE: "save",
+            ANALYSIS: "analysis",
+            EDIT: "edit",
+            SEARCH: "search",
+            CONFIRM: "confirm",
+            CANCEL: "cancel",
+            MANAGE: "manage",
+            LOGOUT: "logout",
+            LOGIN: "login",
+            PRINT: "print"
+        },
+        LABEL: {
+            IMAGE: "사진",
+            UPLOAD: "업로드",
+            DOWNLOAD: "다운로드",
+            ADD: "추가",
+            CREATE: "생성",
+            DELETE: "삭제",
+            CHANGE: "변경",
+            SAVE: "저장",
+            ANALYSIS: "분석",
+            EDIT: "수정",
+            SEARCH: "검색",
+            CONFIRM: "확인",
+            CANCEL: "취소",
+            MANAGE: "관리",
+            LOGOUT: "로그아웃",
+            LOGIN: "로그인",
+            PRINT: "프린트"
+        }
     },
 
     SELECT: {
@@ -59,6 +83,12 @@ const CONST = {
             INTERMEDIATE: "중급",
             BASIC: "초급",
             BEGINNER: "기초"
+        },
+        CATEGORY: {
+            EXAM: "수능",
+            NOVEL: "소설",
+            ESSAY: "논문",
+            ARTICLE: "뉴스",
         }
     },
 
@@ -101,6 +131,7 @@ const CONST = {
 
     ROUTER: {
         PATH: {
+            TEMP: "/tmp",
             HOME: "/",
             LIST: "/list",
             MAIN: "/main",
@@ -112,6 +143,7 @@ const CONST = {
             NOT_FOUND: "*"
         },
         NAME: {
+            TEMP: "Temp",
             "": "Home",
             HOME: "Home",
             LIST: "Movie",

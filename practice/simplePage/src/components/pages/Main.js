@@ -38,21 +38,25 @@ class Main extends React.Component {
     }
 
     changeLevel = (e, value) => {
-        console.log("value", value);
+        console.log("changeLevel", value);
+    }
+
+    changeCategory = (e, value) => {
+        console.log("changeCategory", value);
     }
 
     render() {
         const navItem = Router.filter(ob => ob.name === CONST.ROUTER.NAME.LIST);
         return (
             <div className="Main">
-                <div className="Title SizeRes20 Bold">{CONST.TEXT.MAIN_TITLE}</div>
+                <div className="Title SizeRes20 Bold ColorTitle">{CONST.TEXT.MAIN_TITLE}</div>
                 <div className="Item">
                     <div className="Upload">
                         <div className="SubItem">
                             <input className="Hidden" id="file-upload" type="file" onChange={this.handleUpload} />
-                            <button className="BackColorPrimary ColorWhite UploadButton">
+                            <button className="BackColorPrimary ColorBrightest UploadButton">
                                 <label htmlFor="file-upload" className="Button">
-                                    {CONST.TEXT.FILE} {CONST.BUTTON.UPLOAD}
+                                    {CONST.TEXT.FILE} {CONST.BUTTON.LABEL.UPLOAD}
                                 </label>
                             </button>
                         </div>
@@ -76,6 +80,20 @@ class Main extends React.Component {
                                 onChange={this.changeLevel}
                                 renderInput={(params) => {
                                     return < TextField {...params} label={`${CONST.TEXT.DIFFICULTY} ${CONST.TEXT.SELECT}`} />
+                                }}
+                            />
+                        </div>
+                        <div className="SubItem">
+                            <Autocomplete
+                                id="category"
+                                style={{ minWidth: 120 }}
+                                disableClearable
+                                defaultValue={LIB.MATERIAL_UI.data.select.category[1]}
+                                options={LIB.MATERIAL_UI.data.select.category}
+                                getOptionLabel={(option) => option.title}
+                                onChange={this.changeCategory}
+                                renderInput={(params) => {
+                                    return < TextField {...params} label={`${CONST.TEXT.CATOGORY} ${CONST.TEXT.SELECT}`} />
                                 }}
                             />
                         </div>

@@ -36,7 +36,7 @@ class Profile extends React.Component {
                 <div className="ProfileUpload BackColorPrimary Opacity8 Radius50">
                     <input accept="image/*" className="Hidden" id="profile-upload" type="file" onChange={this.handleUpload} />
                     <label htmlFor="profile-upload">
-                        <IconButton className="Button ColorWhite" variant="contained" aria-label="upload picture" component="span">
+                        <IconButton className="Button ColorBrightest" variant="contained" aria-label="upload picture" component="span">
                             <PhotoCamera />
                         </IconButton>
                     </label>

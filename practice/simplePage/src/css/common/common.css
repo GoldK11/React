@@ -59,18 +59,6 @@ a:-webkit-any-link {
 
 /* 3. Custom Class */
 /* Color */
-.ColorTitle{
-  color: #131313 !important;
-}
-.ColorBody{
-  color: #282828 !important;
-}
-.ColorExtra{
-  color : #757575 !important;
-}
-.ColorDisabled{
-  color : #bdbdbd !important;
-}
 .ColorWhite{
   color: white !important;
 }
@@ -86,31 +74,11 @@ a:-webkit-any-link {
 .ColorGood{
   color: #4caf50 !important;
 }
-.ColorActive{
 
-}
 
 /* .BackColor */
-.BackColorTitle{
-  background-color: #131313 !important;
-}
-.BackColorBody{
-  background-color: #282828 !important;
-}
-.BackColorExtra{
-  background-color : #757575 !important;
-}
-.BackColorDisabled{
-  background-color : #bdbdbd !important;
-}
 .BackColorWhite{
-  background-color: white !important;
-}
-.BackColorConents{
-  background-color: #ccd2d9 !important;
-}
-.BackColorConentsLight{
-  background-color: #dfe3e7 !important;
+  background-color: white !important;  
 }
 .BackColorError{
   background-color: #dc0019 !important;  
@@ -127,23 +95,8 @@ a:-webkit-any-link {
 .BackColorGood{
   background-color: #4caf50 !important;
 }
-.BackColorActive{
-/*  */
-}
 
-
-.BorderTitle{
-  border: 1px solid #131313;
-}
-.BorderBody{
-  border: 1px solid #282828;
-}
-.BorderExtra{
-  border: 1px solid #757575;
-}
-.BorderDisabled{
-  border: 1px solid #bdbdbd;
-}
+/* Border */
 .BorderWhite{
   border: 1px solid white;
 }
@@ -255,10 +208,3 @@ a:-webkit-any-link {
   border-radius: 50%;
   cursor: pointer;
 }
-.Button:hover, .RoundButton:hover{
-  background-color: #ffffff26 !important;
-}
-.ButtonDarken:hover, .RoundButtonDarken:hover{
-  background-color: #81889940 !important;
-}
-

@@ -8,13 +8,13 @@ function Header(props) {
     const subNav = Router.filter(ob => ob.meta.category === CONST.ROUTER.META.CATEGORY.SUB)
 
     return (
-        <div className="Header">
-            <div className="Title ColorWhite">{CONST.APPLICATION}</div>
+        <div className="Header MainGradient">
+            <div className="Title ColorBrightest">{CONST.APPLICATION}</div>
             <div className="MainNav">
-                <Navigation item={mainNav} class="ColorWhite Button Size14"></Navigation>
+                <Navigation item={mainNav} class="ColorBrightest Button Size14"></Navigation>
             </div>
             <div className="SubNav">
-                <Navigation item={subNav} class="ColorWhite Button Size14"></Navigation>
+                <Navigation item={subNav} class="ColorBrightest Button Size14"></Navigation>
             </div>
         </div>
     );
